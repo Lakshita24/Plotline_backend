@@ -1,5 +1,9 @@
 # Plotline_backend
 
-I have tried to create a Node.js server to handle billing operations for a company. The server 
-exposes the features via APIs based on REST principles and handle different scenarios that
-may arise during billing processes. :')
+Modules to install : 
+npm install express body-parser
+npm install mocha chai --save-dev
+
+run the server : node server.js
+After installing the dependencies, run the test cases using the following command:
+mocha path/to/testfile.js
