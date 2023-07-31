@@ -19,7 +19,8 @@ const services = [
 
 // Sample data to store user carts (this can be replaced with a database)
 const carts = {};
-
+// Sample data to store orders (this can be replaced with a database)
+const orders = [];
 // Endpoint to create a new user account
 app.post('/api/user/create', (req, res) => {
   const { userId } = req.body;
@@ -127,6 +128,11 @@ app.post('/api/user/cart/confirmOrder', (req, res) => {
 
   res.json({ message: 'Order confirmed successfully.' });
 });
+
+// Endpoint to fetch all orders made by users (Admin API)
+app.get('/api/admin/orders', (req, res) => {
+    res.json({ orders });
+  });
 
 // Start the server
 const port = 3000;
